@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://live.zwidgets.com/js-sdk/1.2/ZohoEmbededAppSDK.min.js"></script>
+  <title>Choose products</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="wgt_cp_popupContent">
+    <section class="wgt_cp_contentWrap">
+      <div hidden="true" id="noProductDiv">
+        <pre>No products associated to the selected deal</pre>
+      </div>
+      <table width="100%" cellspacing="0" id="pTable">
+        <thead>
+          <tr class="wgt_productTblHead">
+            <th><input type="checkbox" id="selectAll" onclick="selectAllProducts(this)"></th>
+            <th>Product Name</th>
+            <th>Product Category</th>
+            <th>Unit Price</th>
+            <th>Quantity in Stock</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </section>
+    <footer class="wgt_cp_footerWrap">
+      <div class="wgt_selecProdWrapper">
+        <span class="wgt_selectedProdCount" id="selectedCount">0 Products selected</span>
+        <span class="wgt_clearSelProducts" onclick="clearSelection()">Clear</span>
+      </div>
+      <div>
+        <button type="button" class="wgt_nextBtn wgt_primaryBtn" onclick="closewidget()">Next</button>
+      </div>
+    </footer>
+  </div>
+  <script src="./script/script.js"></script>
+</body>
+
+</html>
