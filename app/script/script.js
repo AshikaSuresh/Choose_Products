@@ -5,8 +5,6 @@ ZOHO.embeddedApp.on("PageLoad", async function (data) {
 	console.log("data from Client Script", data);
 
 	maxRows = data.max_rows;
-
-	document.getElementsByClassName("lyteModalClose").innerHTML = "";
 	
 	const search_response = await ZOHO.CRM.API.searchRecord({ Entity: "Products", Type: "criteria", Query: "(Product_Category:equals:" + data.product_category + ")" })
 	
